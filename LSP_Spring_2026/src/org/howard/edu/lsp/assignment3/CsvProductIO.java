@@ -104,12 +104,10 @@ public class CsvProductIO {
      * Ensures the parent directory exists to avoid FileNotFoundException.
      */
     public static class Writer {
-        private final Path outputPath;
         private BufferedWriter bw;
 
         /** Opens the output file and prepares a buffered writer. */
         public Writer(Path outputPath) {
-            this.outputPath = outputPath;
             try {
                 File parent = outputPath.toFile().getParentFile();
                 if (parent != null && !parent.exists()) parent.mkdirs();
