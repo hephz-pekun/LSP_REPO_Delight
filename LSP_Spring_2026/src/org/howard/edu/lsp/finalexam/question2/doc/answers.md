@@ -1,0 +1,3 @@
+Template Method Design Explanation
+
+The Template Method pattern is implemented in the abstract `Report` class through the `generateReport()` method, which defines the fixed workflow for report generation. The steps `loadData`, `formatHeader`, `formatBody`, and `formatFooter` are declared as abstract methods and implemented by subclasses. `StudentReport` and `CourseReport` customize these steps while adhering to the same overall algorithm. This approach enforces consistency while allowing flexible, report-specific behavior through polymorphism.
